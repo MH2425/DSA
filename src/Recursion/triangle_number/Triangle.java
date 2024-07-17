@@ -1,7 +1,7 @@
 package Recursion.triangle_number;
 
 public class Triangle {
-    private int width;
+    private final int width;
 
     /**
      * Constructs a triangular shape
