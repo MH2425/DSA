@@ -31,9 +31,9 @@ public class PalindromicPhrase {
         System.out.println("Enter a phrase: ");
         String text = sc.nextLine();
         if (isPalindrome(text)) {
-            System.out.println("The phrase " + text + " is palindromic");
+            System.out.println("The phrase " + "\"" + text + "\"" + " is a palindromic phrase");
         } else {
-            System.out.println("The phrase " + text + " is not a palindromic");
+            System.out.println("The phrase " + "\"" + text + "\"" + " is not a palindromic phrase");
         }
     }
 }
