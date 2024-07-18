@@ -26,6 +26,36 @@ public class PalindromicPhrase {
             }
         }
     }
+    /**
+     Tests whether a substring is a palindrome.
+     @param text a string that is being checked
+     @param start the index of the first character of the substring
+     @param end the index of the last character of the substring
+     @return true if the substring is a palindrome
+     */
+    public static boolean isPalindrome(String text, int start, int end) {
+        if (start >= end) {
+            return true;
+        } else {
+            char first = Character.toLowerCase(text.charAt(start));
+            char last = Character.toLowerCase(text.charAt(end));
+            if (Character.isLetter(first) && Character.isLetter(last)) {
+                if (first == last) {
+                    return isPalindrome(text, start + 1, end - 1);
+                } else {
+                    return false;
+                }
+            } else if (!Character.isLetter(last)) {
+                return isPalindrome(text, start, end - 1);
+            } else {
+                return isPalindrome(text, start + 1, end);
+            }
+        }
+    }
+
+    public static boolean isPalindromeAnotherMethodHelper(String text) {
+        return isPalindrome(text, 0, text.length() - 1);
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a phrase: ");
