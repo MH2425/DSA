@@ -26,7 +26,6 @@ public class Permutations {
         // Empty string has single permutation: itself
         if (word.isEmpty()) {
             result.add(word);
-            return result;
         } else {
             // Looping through all character positions
             int length = word.length();
@@ -42,7 +41,8 @@ public class Permutations {
                     result.add(word.charAt(charIdx) + string);
                 }
             }
-            return result;
         }
+        return result;
     }
+
 }
