@@ -70,7 +70,7 @@ public class Evaluator {
         int value;
         String next = tokenizer.peekToken();
         if ("(".equals(next)) {
-            tokenizer.nextToke(); // Discard "("
+            tokenizer.nextToken(); // Discard "("
             value = getExpressionValue();
             tokenizer.nextToken(); // Discard ")"
         } else {
