@@ -10,8 +10,9 @@ public class ExpressionCalculator {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter an expression: ");
-        String input = in.nextLine().replace(" ", "");
-        Evaluator e = new Evaluator(input);
+        String input = in.nextLine();
+        String output = input.replace(" ","");
+        Evaluator e = new Evaluator(output);
         int value = e.getExpressionValue();
         System.out.println(input + " = " + value);
     }
