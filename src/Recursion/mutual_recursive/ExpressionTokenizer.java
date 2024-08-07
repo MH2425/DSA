@@ -43,7 +43,7 @@ public class ExpressionTokenizer {
             return r;
         } else if (Character.isDigit(input.charAt(start))) {
             end = start + 1;
-            while (end <  input.length() && Character.isDigit(input.charAt(end))) {
+            while (end < input.length() && Character.isDigit(input.charAt(end))) {
                 end++;
             }
         } else {
