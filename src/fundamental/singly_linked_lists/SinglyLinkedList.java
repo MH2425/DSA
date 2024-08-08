@@ -1,7 +1,7 @@
 package fundamental.singly_linked_lists;
 
 public class SinglyLinkedList<E> {
-    public static class Node<E> {
+    private static class Node<E> {
         private E element; // reference to the element stored at this node
         private Node<E> next; // reference to the subsequent node in the list
         public Node(E element, Node<E> next) {
