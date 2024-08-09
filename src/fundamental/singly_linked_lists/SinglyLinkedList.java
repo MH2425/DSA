@@ -127,6 +127,30 @@ public class SinglyLinkedList<E> {
     }
 
     /**
+     * Method compares to SinglyLinkedList
+     * @param o other SinglyLinkedList
+     * @return true ìf the two lists are equals
+     */
+    public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        } else if (this.getClass() != o.getClass()) {
+            return false;
+        } else if (this.size() != ((SinglyLinkedList<?>) o).size) {
+            return false;
+        } else {
+            Node<E> walkA = this.head;
+            Node<E> walkB = (Node<E>) ((SinglyLinkedList<?>) o).head;
+            while (walkA != null) {
+                if (!walkA.getElement().equals(walkB.getElement())) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    /**
      * Print out the list
      * @return String in format: [e1][e2][e3]...
      */
