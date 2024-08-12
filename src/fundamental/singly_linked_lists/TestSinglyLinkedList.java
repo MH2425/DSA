@@ -9,8 +9,17 @@ public class TestSinglyLinkedList {
         singlyLinkedList.addLast(22222233);
         System.out.println(singlyLinkedList);
         System.out.println("---------------");
+
         System.out.println(singlyLinkedList.removeFirst());
         System.out.println(singlyLinkedList.removeLast());
         System.out.println(singlyLinkedList);
+
+        SinglyLinkedList<Integer> singlyLinkedList1 = new SinglyLinkedList<>();
+        singlyLinkedList1.addFirst(3);
+        singlyLinkedList1.addLast(3333333);
+        System.out.println(singlyLinkedList1);
+        System.out.println(singlyLinkedList);
+
+        System.out.println(singlyLinkedList.equals(singlyLinkedList1));
     }
 }

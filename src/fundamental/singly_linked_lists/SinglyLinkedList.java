@@ -134,17 +134,21 @@ public class SinglyLinkedList<E> {
     public boolean equals(Object o) {
         if (o == null) {
             return false;
-        } else if (this.getClass() != o.getClass()) {
-            return false;
-        } else if (this.size() != ((SinglyLinkedList<?>) o).size) {
+        } else if (getClass() != o.getClass()) {
             return false;
         } else {
-            Node<E> walkA = this.head;
-            Node<E> walkB = (Node<E>) ((SinglyLinkedList<?>) o).head;
+            SinglyLinkedList other = (SinglyLinkedList) o;
+            if (size != other.size) {
+                return false;
+            }
+            Node walkA = head;
+            Node walkB = other.head;
             while (walkA != null) {
                 if (!walkA.getElement().equals(walkB.getElement())) {
                     return false;
                 }
+                walkA = walkA.getNext();
+                walkB = walkB.getNext();
             }
             return true;
         }
