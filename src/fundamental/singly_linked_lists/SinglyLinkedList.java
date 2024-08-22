@@ -134,24 +134,27 @@ public class SinglyLinkedList<E> {
     public boolean equals(Object o) {
         if (o == null) {
             return false;
-        } else if (getClass() != o.getClass()) {
+        }
+
+        if (getClass() != o.getClass()) {
             return false;
-        } else {
-            SinglyLinkedList other = (SinglyLinkedList) o;
-            if (size != other.size) {
+        }
+
+        SinglyLinkedList other = (SinglyLinkedList) o;
+        if (size != other.size()) {
+            return false;
+        }
+
+        Node walkA = head;
+        Node walkB = other.head;
+        while ((walkA != null) && (walkB != null)) {
+            if (!walkA.getElement().equals(walkB.getElement())) {
                 return false;
             }
-            Node walkA = head;
-            Node walkB = other.head;
-            while (walkA != null) {
-                if (!walkA.getElement().equals(walkB.getElement())) {
-                    return false;
-                }
-                walkA = walkA.getNext();
-                walkB = walkB.getNext();
-            }
-            return true;
+            walkA = walkA.getNext();
+            walkB = walkB.getNext();
         }
+        return true;
     }
 
     /**
