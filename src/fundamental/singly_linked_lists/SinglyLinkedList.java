@@ -140,13 +140,13 @@ public class SinglyLinkedList<E> {
             return false;
         }
 
-        SinglyLinkedList other = (SinglyLinkedList) o;
+        SinglyLinkedList<E> other = (SinglyLinkedList<E>) o;
         if (size != other.size()) {
             return false;
         }
 
-        Node walkA = head;
-        Node walkB = other.head;
+        Node<E> walkA = head;
+        Node<E> walkB = other.head;
         while ((walkA != null) && (walkB != null)) {
             if (!walkA.getElement().equals(walkB.getElement())) {
                 return false;
