@@ -1,4 +1,4 @@
-package fundamental.double_linked_list;
+package fundamental.linked_lists.double_linked_list;
 
 public class DoublyLinkedList<E> {
     private Node<E> header;

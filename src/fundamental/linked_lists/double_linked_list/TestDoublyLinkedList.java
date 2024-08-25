@@ -1,4 +1,4 @@
-package fundamental.double_linked_list;
+package fundamental.linked_lists.double_linked_list;
 
 public class TestDoublyLinkedList {
     public static void main(String[] args) {

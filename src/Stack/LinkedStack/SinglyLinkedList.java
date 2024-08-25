@@ -1,7 +1,7 @@
-package fundamental.singly_linked_lists;
+package Stack.LinkedStack;
 
 public class SinglyLinkedList<E> {
-    private static class Node<E> {
+    protected static class Node<E> {
         private E element; // reference to the element stored at this node
         private Node<E> next; // reference to the subsequent node in the list
         public Node(E element, Node<E> next) {
@@ -22,8 +22,8 @@ public class SinglyLinkedList<E> {
         }
     }
 
-    private Node<E> head; // head node of the list (or null if empty)
-    private Node<E> tail; // last node of the list (or null if empty)
+    protected Node<E> head; // head node of the list (or null if empty)
+    protected Node<E> tail; // last node of the list (or null if empty)
     private int size;
     public SinglyLinkedList() {
         head = null;

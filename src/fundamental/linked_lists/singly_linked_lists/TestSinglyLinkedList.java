@@ -1,4 +1,4 @@
-package fundamental.singly_linked_lists;
+package fundamental.linked_lists.singly_linked_lists;
 
 public class TestSinglyLinkedList {
     public static void main(String[] args) {
