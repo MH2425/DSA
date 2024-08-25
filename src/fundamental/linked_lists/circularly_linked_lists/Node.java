@@ -1,4 +1,4 @@
-package fundamental.circularly_linked_lists;
+package fundamental.linked_lists.circularly_linked_lists;
 
 public class Node<E> {
     private E element;

@@ -1,4 +1,4 @@
-package fundamental.circularly_linked_lists;
+package fundamental.linked_lists.circularly_linked_lists;
 
 public class TestCircularlyLinkedList {
     public static void main(String[] args) {

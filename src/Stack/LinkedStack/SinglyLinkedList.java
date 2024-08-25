@@ -1,7 +1,7 @@
-package fundamental.singly_linked_lists;
+package Stack.LinkedStack;
 
 public class SinglyLinkedList<E> {
-    private static class Node<E> {
+    protected static class Node<E> {
         private E element; // reference to the element stored at this node
         private Node<E> next; // reference to the subsequent node in the list
         public Node(E element, Node<E> next) {
@@ -22,8 +22,8 @@ public class SinglyLinkedList<E> {
         }
     }
 
-    private Node<E> head; // head node of the list (or null if empty)
-    private Node<E> tail; // last node of the list (or null if empty)
+    protected Node<E> head; // head node of the list (or null if empty)
+    protected Node<E> tail; // last node of the list (or null if empty)
     private int size;
     public SinglyLinkedList() {
         head = null;
@@ -124,6 +124,37 @@ public class SinglyLinkedList<E> {
             size--;
             return currentNode.getElement();
         }
+    }
+
+    /**
+     * Method compares to SinglyLinkedList
+     * @param o other SinglyLinkedList
+     * @return true ìf the two lists are equals
+     */
+    public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+
+        if (getClass() != o.getClass()) {
+            return false;
+        }
+
+        SinglyLinkedList<E> other = (SinglyLinkedList<E>) o;
+        if (size != other.size()) {
+            return false;
+        }
+
+        Node<E> walkA = head;
+        Node<E> walkB = other.head;
+        while ((walkA != null) && (walkB != null)) {
+            if (!walkA.getElement().equals(walkB.getElement())) {
+                return false;
+            }
+            walkA = walkA.getNext();
+            walkB = walkB.getNext();
+        }
+        return true;
     }
 
     /**
