@@ -1,12 +1,17 @@
-package DataStructures.fundamental.linked_lists.circularly_linked_lists;
+package DataStructures.LinkedList.CircularlyLinkedList;
 
+import DataStructures.LinkedList.SinglyLinkedList.SinglyLinkedList;
+
+/**
+ * Node class
+ * @param <E>
+ */
 public class Node<E> {
     private E element;
     private Node<E> next;
-
-    public Node(E element, Node<E> next) {
-        this.element = element;
-        this.next = next;
+    public Node(E e, Node<E> n) {
+        element = e;
+        next = n;
     }
 
     public E getElement() {
